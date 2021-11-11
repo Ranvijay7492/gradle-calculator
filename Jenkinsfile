@@ -19,7 +19,7 @@ pipeline
             }
             }
         }
-        stage('code build')
+        stage('code test')
         {
             steps{
                 withGradle 
