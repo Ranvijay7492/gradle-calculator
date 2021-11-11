@@ -16,8 +16,15 @@ pipeline
                 {
                    sh './gradlew clean build'
                    sh './gradlew jar'
+            }
+            }
+        }
+        stage('code build')
+        {
+            steps{
+                withGradle 
+                {
                    sh './gradlew test'
-
             }
             }
         }
